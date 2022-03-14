@@ -2,10 +2,8 @@ alert("Elige los productos deseados de la siguiente lista para calcular su costo
 
 entrada = Number(prompt("Elige un producto de la lista: \n 1. Harina: $1000  \n 2. Sal: $1200 \n 3. Huevo: $1300 \n 4.Esencia: $1400 \n 5.Terminar"));
 
-const harina = 1000;
-const sal = 1200;
-const huevo = 1300;
-const esencia = 1400;
+const ingredientes = ["harina" , "sal" , "huevo" , "esencia" ]
+const precio = [1000 , 1200 , 1300 , 1400]
 
 let valorFinal = 0;
 let producto = "";
@@ -20,24 +18,24 @@ function calcular() {
     while (entrada != 5) {
         switch (entrada) {
             case 1:
-                valorFinal += harina;
-                producto += `Harina, $ ${harina}\n`;
-                alert(`Ha elegido Harina por un valor de ${harina}, continue`)
+                valorFinal += precio[entrada-1];
+                producto += `${ingredientes[entrada-1]}, $ ${precio[entrada-1]}\n`;
+                alert(`Ha elegido ${ingredientes[entrada-1]} por un valor de ${precio[entrada-1]}, continue`)
                 break;
             case 2:
-                valorFinal += sal;
-                producto += `Sal, $ ${sal}\n`
-                alert(`Ha elegido Sal por un valor de ${sal}, continue`)
+                valorFinal += precio[entrada-1];
+                producto += `${ingredientes[entrada-1]}, $ ${precio[entrada-1]}\n`;
+                alert(`Ha elegido ${ingredientes[entrada-1]} por un valor de ${precio[entrada-1]}, continue`)
                 break;
             case 3:
-                valorFinal += huevo;
-                producto += `Huevo, $ ${huevo}\n`;
-                alert(`Ha elegido huevo por un valor de ${huevo}, continue`)
+                valorFinal += precio[entrada-1];
+                producto += `${ingredientes[entrada-1]}, $ ${precio[entrada-1]}\n`;
+                alert(`Ha elegido ${ingredientes[entrada-1]} por un valor de ${precio[entrada-1]}, continue`)
                 break;
             case 4:
-                valorFinal += esencia;
-                producto += `Esencia, $ ${esencia}\n`;
-                alert(`Ha elegido Esencia por un valor de ${esencia}, continue`)
+                valorFinal += precio[entrada-1];
+                producto += `${ingredientes[entrada-1]}, $ ${precio[entrada-1]}\n`;
+                alert(`Ha elegido ${ingredientes[entrada-1]} por un valor de ${precio[entrada-1]}, continue`)
                 break;
             default:
                 alert("Ingrese una opción por favor");
